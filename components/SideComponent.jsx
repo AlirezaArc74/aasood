@@ -7,25 +7,28 @@ import styles from "../styles/Side.module.scss";
 
 // State Management
 import { useAllState } from "../UserContext";
-import Add from "./AddComponent";
+import Add from "../components/add/AddComponent";
 import Profile from "./profile/ProfileComponent";
 
 const Side = (props) => {
-  const { data, showModal, setShowModal, userProfile, setUserProfile } = useAllState();
-  
+  const {
+    data,
+    showProfileModal,
+    setProfileShowModal,
+    setUserProfile,
+    showAddModal,
+    setShowAddModal,
+  } = useAllState();
 
-  function openAddModal() {
-  };
-
-  console.log(showModal);
+  function handleModal() {
+    setShowAddModal(true)
+    setProfileShowModal(false)
+  }
 
   const openProfile = (id) => {
     const p = data.findIndex((user) => user.id === id);
     if (p === -1) return null;
-    return  (
-      setShowModal(true),
-      setUserProfile(data[p])
-    )    
+    return setProfileShowModal(true), setUserProfile(data[p], setShowAddModal(false));
   };
 
   function renderList() {
@@ -80,13 +83,17 @@ const Side = (props) => {
 
         {renderList()}
 
-        <Add />
-        <button onClick={() => openAddModal()} className={styles.addButton}>
+        <button
+          onClick={() => handleModal()}
+          className={styles.addButton}
+        >
           +
         </button>
       </section>
 
-      <section>{showModal ? <Profile/> : null}</section>
+      <section> {showAddModal ? <Add /> : null} </section>
+
+      <section>{showProfileModal ? <Profile /> : null}</section>
     </>
   );
 };

@@ -1,0 +1,24 @@
+@import '../../styles/colors.module.scss';
+
+
+
+.main {
+  background-color: red;
+  // background-color: $container-bg;
+  position: absolute;
+  left: 530px;
+  top: 180px;
+  width: 45%;
+  height: 70%;
+}
+
+.closeModal {
+  position: absolute;
+  right: 0px;
+}
+
+.hrLine {
+  background-color: $base-hrLine;
+  opacity: .6;
+  margin-top: 70px;
+}

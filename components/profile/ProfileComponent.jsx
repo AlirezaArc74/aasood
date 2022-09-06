@@ -11,8 +11,8 @@ import { useEffect } from "react";
 
 const Profile = () => {
   const {
-    showModal,
-    setShowModal,
+    showProfileModal,
+    setProfileShowModal,
     userProfile,
     setUserProfile,
     data,
@@ -21,20 +21,16 @@ const Profile = () => {
 
   const deleteProfile = (id) => {
     const arr = [...data];
-    arr.splice(0, id);
+    arr.splice(id, 1);
     setData(arr);
 
     const obj = { ...userProfile };
-
     for (const key in obj) {
       delete obj[key];
     }
     setUserProfile(obj);
-    setShowModal(!showModal);
+    setProfileShowModal(!showProfileModal);
   };
-  console.log(userProfile);
-
-  console.log(data);
 
   return (
     <>
@@ -50,7 +46,7 @@ const Profile = () => {
             {userProfile.name}
           </h1>
 
-          <div onClick={() => setShowModal(false)} className={styles.close}>
+          <div onClick={() => setProfileShowModal(false)} className={styles.close}>
             <Image
               src="/../../images/Vector-2.svg"
               alt="zarbdar"

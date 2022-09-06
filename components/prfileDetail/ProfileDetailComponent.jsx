@@ -39,9 +39,9 @@ const ProfileDetail = () => {
 
         <div className={styles.profileContainer}>
           <p>URL </p>
-          {/* <Link href={userProfile.url }>
+          <Link href={userProfile.url }>
             <a className={styles.centerTagInJustify}> {userProfile.url} </a>
-          </Link> */}
+          </Link>
           <Image
             src="/../../images/ep_copy-document.svg"
             alt="copy"

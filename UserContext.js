@@ -3,18 +3,19 @@ import { createContext, useContext, useState } from "react";
 const UserContext = createContext();
 
 const UserContextProvider = ({ children }) => {
-  const [showModal, setShowModal] = useState(false);
+  const [showProfileModal, setProfileShowModal] = useState(false);
   const [userProfile, setUserProfile] = useState({});
+  const [showAddModal, setShowAddModal] = useState(false);
   const [data, setData] = useState([
     {
-      id: 1,
+      id: 0,
       name: "google",
-      password: "$3%356!de",
-      username: "g_goole",
+      password: "$43@fd%^bc",
+      username: "G-GGOOL",
       url: "www.google.com",
     },
     {
-      id: 2,
+      id: 1,
       name: "google",
       password: "$3%356!de",
       username: "g_goole",
@@ -27,10 +28,12 @@ const UserContextProvider = ({ children }) => {
       value={{
         data,
         setData,
-        showModal,
-        setShowModal,
+        showProfileModal,
+        setProfileShowModal,
         userProfile,
         setUserProfile,
+        showAddModal,
+        setShowAddModal,
       }}
     >
       {children}

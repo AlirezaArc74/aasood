@@ -1,0 +1,47 @@
+@import './colors.module.scss';
+
+
+.main {
+  position: absolute;
+  background-color: $container-bg;
+  height: 100%;
+  width: 32%;
+  padding-left: 60px;
+  padding-top: 70px;
+}
+
+.searchInput {
+  outline: none;
+  border: unset;
+  font-size: 18px;
+  padding-left: 15px;
+  color: #919191;
+}
+
+.imgInputContainer {
+  display: flex;
+}
+
+.hrLine {
+  margin-top: 40px;
+  background-color: #919191;
+  opacity: .6;
+  
+}
+
+
+.liSide {
+  list-style-type: none;
+  margin-left: 10px;
+}
+
+.bulletLiContainer {
+  display: flex;
+  padding: 10px;
+}
+
+.ul {
+
+  margin-left: -15px;
+  padding: 0;
+}

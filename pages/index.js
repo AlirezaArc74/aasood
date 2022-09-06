@@ -8,12 +8,18 @@ import styles from "../styles/Home.module.scss";
 export default function Home() {
   const [inputPassValue, setInputPassValue] = useState("");
 
-  const route = useRouter()
+  const route = useRouter();
 
   const loginHandle = () => {
-    
-    if (inputPassValue === 'password') return route.push('/list')
-  }
+    if (inputPassValue === "password") return route.push("/list");
+    else {
+      return (
+        <div>
+          <h1 className={styles.incorectPass}> password in incorect </h1>
+        </div>
+      );
+    }
+  };
   return (
     <>
       <Head>
@@ -59,7 +65,9 @@ export default function Home() {
 
           <button className={styles.hintBtn}> Hint </button>
         </div>
-        <button onClick={() => loginHandle()} className={styles.loginBtn}> Login </button>
+        <button onClick={() => loginHandle()} className={styles.loginBtn}>
+          Login
+        </button>
       </section>
     </>
   );

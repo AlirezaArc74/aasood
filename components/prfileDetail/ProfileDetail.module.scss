@@ -1,0 +1,20 @@
+
+@import '../../styles/colors.module.scss';
+
+.profileMain {
+  margin-top: 60px;
+}
+
+.profileContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // margin-top: 30px;
+  border-bottom: 1px solid $base-side-grey;
+  // width: 60%;
+}
+
+.centerTagInJustify {
+  position: absolute;
+  left: 150px;
+}

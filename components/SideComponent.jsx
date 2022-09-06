@@ -1,5 +1,6 @@
 // Next Component
 import Image from "next/image";
+import { useState } from "react";
 
 // Style Sheet
 import styles from "../styles/Side.module.scss";
@@ -7,12 +8,27 @@ import styles from "../styles/Side.module.scss";
 // State Management
 import { useAllState } from "../UserContext";
 import Add from "./AddComponent";
+import Profile from "./profile/ProfileComponent";
 
 const Side = (props) => {
-  const { data } = useAllState();
-  console.log(data);
+  const { data, showModal, setShowModal, userProfile, setUserProfile } = useAllState();
+  
 
-  function renderLiset() {
+  function openAddModal() {
+  };
+
+  console.log(showModal);
+
+  const openProfile = (id) => {
+    const p = data.findIndex((user) => user.id === id);
+    if (p === -1) return null;
+    return  (
+      setShowModal(true),
+      setUserProfile(data[p])
+    )    
+  };
+
+  function renderList() {
     if (data)
       return (
         <div>
@@ -28,7 +44,11 @@ const Side = (props) => {
                       height={24}
                       alt="bullet"
                     />
-                    <li className={styles.liSide} key={user.id}>
+                    <li
+                      className={styles.liSide}
+                      onClick={() => openProfile(user.id)}
+                      key={user.id}
+                    >
                       {user.name}
                     </li>
                   </div>
@@ -58,10 +78,15 @@ const Side = (props) => {
 
         <hr className={styles.hrLine} />
 
-        {renderLiset()}
+        {renderList()}
 
         <Add />
+        <button onClick={() => openAddModal()} className={styles.addButton}>
+          +
+        </button>
       </section>
+
+      <section>{showModal ? <Profile/> : null}</section>
     </>
   );
 };

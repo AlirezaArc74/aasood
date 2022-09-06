@@ -1,5 +1,4 @@
-@import './colors.module.scss';
-
+@import "./colors.module.scss";
 
 .main {
   position: absolute;
@@ -24,11 +23,21 @@
 
 .hrLine {
   margin-top: 40px;
-  background-color: #919191;
-  opacity: .6;
-  
+  background-color: $base-hrLine;
+  opacity: 0.6;
 }
 
+.addButton {
+  background-color: $base-side-grey;
+  border: unset;
+  color: $container-bg;
+  width: 87%;
+  height: 64px;
+  font-size: 50px;
+  position: absolute;
+  bottom: 60px;
+  cursor: pointer;
+}
 
 .liSide {
   list-style-type: none;
@@ -41,7 +50,6 @@
 }
 
 .ul {
-
   margin-left: -15px;
   padding: 0;
 }

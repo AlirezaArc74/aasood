@@ -1,14 +1,20 @@
 // Style Component
+import { useState } from "react";
 import styles from "../styles/Add.module.scss";
 
+// State Management
+import { useAllState } from "../UserContext";
+
 const Add = () => {
-  return (
-    <>
-      <button onClick={() => openAddModal()} className={styles.addButton}>
-        +
-      </button>
-    </>
-  );
+  const { showModal, setShowModal } = useAllState();
+
+  if (showModal)
+    return (
+      <>
+       
+      </>
+    );
+  return <></>;
 };
 
 export default Add;

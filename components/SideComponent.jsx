@@ -49,10 +49,10 @@ const Side = (props) => {
                     />
                     <li
                       className={styles.liSide}
-                      onClick={() => openProfile(user.id)}
-                      key={user.id}
+                      onClick={() => openProfile(user?.id)}
+                      key={user?.id}
                     >
-                      {user.name}
+                      {user?.name}
                     </li>
                   </div>
                 </>

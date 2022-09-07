@@ -21,7 +21,8 @@ const Profile = () => {
 
   const deleteProfile = (id) => {
     const arr = [...data];
-    arr.splice(id, 1);
+    const deleteById = arr.findIndex((obj) => obj.id == id)
+    arr.splice(deleteById, 1);
     setData(arr);
 
     const obj = { ...userProfile };
@@ -32,57 +33,61 @@ const Profile = () => {
     setProfileShowModal(!showProfileModal);
   };
 
-  return (
-    <>
-      <section className={styles.main}>
-        <div className={styles.nameHeader}>
-          <Image
-            src="/../../images/EllipseBigger-2.svg"
-            alt="circle"
-            width={64}
-            height={64}
-          />
-          <h1 className={styles.name} onClick={() => setShowModal(false)}>
-            {userProfile.name}
-          </h1>
-
-          <div onClick={() => setProfileShowModal(false)} className={styles.close}>
+  if (userProfile)
+    return (
+      <>
+        <section className={styles.main}>
+          <div className={styles.nameHeader}>
             <Image
-              src="/../../images/Vector-2.svg"
-              alt="zarbdar"
-              height={16}
-              width={16}
+              src="/../../images/EllipseBigger-2.svg"
+              alt="circle"
+              width={64}
+              height={64}
             />
-          </div>
-        </div>
+            <h1 className={styles.name} onClick={() => setShowModal(false)}>
+              {userProfile.name}
+            </h1>
 
-        <div className={styles.binAndPenContainer}>
-          <div className={styles.binAndPenCircle}>
-            <Image
-              src="/../../images/pen.svg"
-              alt="bin"
-              height={18}
-              width={18}
-            />
-          </div>
-          <div className={styles.binAndPenCircle}>
-            <div onClick={() => deleteProfile(userProfile.id)}>
+            <div
+              onClick={() => setProfileShowModal(false)}
+              className={styles.close}
+            >
               <Image
-                src="/../../images/bin.svg"
-                alt="pen"
+                src="/../../images/Vector-2.svg"
+                alt="zarbdar"
+                height={16}
+                width={16}
+              />
+            </div>
+          </div>
+
+          <div className={styles.binAndPenContainer}>
+            <div className={styles.binAndPenCircle}>
+              <Image
+                src="/../../images/pen.svg"
+                alt="bin"
                 height={18}
                 width={18}
               />
             </div>
+            <div className={styles.binAndPenCircle}>
+              <div onClick={() => deleteProfile(userProfile.id)}>
+                <Image
+                  src="/../../images/bin.svg"
+                  alt="pen"
+                  height={18}
+                  width={18}
+                />
+              </div>
+            </div>
           </div>
-        </div>
 
-        <hr className={styles.hrLine} />
+          <hr className={styles.hrLine} />
 
-        <ProfileDetail />
-      </section>
-    </>
-  );
+          <ProfileDetail />
+        </section>
+      </>
+    );
 };
 
 export default Profile;

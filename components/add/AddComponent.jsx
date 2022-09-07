@@ -28,7 +28,6 @@ const Add = () => {
     else alert("error");
   }
 
-
   if (showAddModal)
     return (
       <>
@@ -104,7 +103,6 @@ const Add = () => {
         </section>
       </>
     );
-  return <></>;
 };
 
 export default Add;

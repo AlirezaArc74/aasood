@@ -9,10 +9,10 @@ const UserContextProvider = ({ children }) => {
   const [data, setData] = useState([
     {
       id: 0,
-      name: "google",
+      name: "yahoo",
       password: "$43@fd%^bc",
       username: "G-GGOOL",
-      url: "www.google.com",
+      url: "www.yahoo.com",
     },
     {
       id: 1,

@@ -6,7 +6,7 @@ import Link from "next/link";
 import styles from "./ProfileDetail.module.scss";
 
 // State management
-import { useAllState } from "../../UserContext";
+import { useAllState } from "../../context/UserContext";
 
 const ProfileDetail = () => {
   const { userProfile } = useAllState();

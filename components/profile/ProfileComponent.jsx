@@ -5,9 +5,8 @@ import styles from "./Profile.module.scss";
 import Image from "next/image";
 
 //state management
-import { useAllState } from "../../UserContext";
+import { useAllState } from "../../context/UserContext";
 import ProfileDetail from "../prfileDetail/ProfileDetailComponent";
-import { useEffect } from "react";
 
 const Profile = () => {
   const {

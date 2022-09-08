@@ -1,6 +1,6 @@
 // Components
-import Desktop from "../components/DesktopComponent";
-import Side from "../components/SideComponent";
+import Desktop from "../components/desktop/DesktopComponent.jsx";
+import Side from "../components/side/SideComponent.jsx";
 
 
 const List = () => {

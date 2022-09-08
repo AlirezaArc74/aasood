@@ -5,14 +5,14 @@ import Image from "next/image";
 import { useState } from "react";
 
 // Style Sheet
-import styles from "../styles/Side.module.scss";
+import styles from "./Side.module.scss";
 
 // State Management
-import { useAllState } from "../UserContext";
+import { useAllState } from "../../context/UserContext";
 
 // My Component
-import Add from "../components/add/AddComponent";
-import Profile from "./profile/ProfileComponent";
+import Add from "../add/AddComponent";
+import Profile from "../profile/ProfileComponent";
 
 const Side = (props) => {
   const {

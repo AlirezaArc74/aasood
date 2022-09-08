@@ -1,10 +1,10 @@
-@import "./colors.module.scss";
+@import "../../styles/colors.module.scss";
 
 .main {
   position: absolute;
   background-color: $container-bg;
   height: 100%;
-  width: 32%;
+  width: 36%;
   padding-left: 60px;
   padding-top: 70px;
 }

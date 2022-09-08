@@ -12,40 +12,36 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .container {
   background-color: $bg-login;
-  height: $base-height * 3;
-  width: $base-width * 5;
-  border-radius: $base-border-radius * 4.5;
-  box-shadow: $base-box-shadow;
-  position: $base-relative;
-  top: $base-top * 22;
+  width: 516px;
+  height: 272px;
+  border-radius: 46px;
+  box-shadow: 0px 18px 29px -5px rgba(0, 0, 0, 0.25);
 }
 
-.manContainer {
-  width: $base-width;
-  position: $base-absolute;
-  left: $base-left * 16;
-  top: $base-top * -8;
+.circle {
+  display: flex;
+  justify-content: center;
+  margin-top: -90px;
 }
 
 .man {
-  position: $base-absolute;
-  top: $base-top * 3;
-  left: $base-left * 3.5;
-  z-index: 30px;
-  width: $base-width;
+  display: flex;
+  justify-content: center;
+  margin-top: -160px;
 }
 
 .inputContainer {
-  margin-top: 120px;
+  margin-top: 60px;
   display: flex;
   background-color: $bg-manHolder;
   width: 440px;
   margin-left: 30px;
-  border-radius: $base-border * 10;
+  border-radius: 0px 10px 10px 0px;
 }
 
 .loginInput {
@@ -62,18 +58,22 @@
   padding: 5px;
 }
 
-.hintBtn {
-  background-color: $bg-manHolder;
-  width: 440px;
-  margin-left: 30px;
-  margin-top: 30px;
-  height: 40px;
-  border-radius: $base-border * 10;
-  cursor: pointer;
-  font-size: 20px;
-  color: #ffffff;
-  border: unset;
+.forgetPassword {
+  margin-left: 27px;
 }
+
+// .hintBtn {
+//   background-color: $bg-manHolder;
+//   width: 440px;
+//   margin-left: 30px;
+//   margin-top: 30px;
+//   height: 40px;
+//   border-radius: $base-border * 10;
+//   cursor: pointer;
+//   font-size: 20px;
+//   color: #ffffff;
+//   border: unset;
+// }
 
 .loginBtn {
   height: 64px;
@@ -82,16 +82,9 @@
   box-shadow: 0px 18px 29px -5px rgba(0, 0, 0, 0.25);
   border-radius: 0px 0px 32px 32px;
   border: unset;
-  position: absolute;
-  bottom: 237px;
   font-size: 20px;
   color: #ffffff;
   cursor: pointer;
-}
-
-
-.incorectPass {
-  position: absolute;
-  z-index: 1000;
-  background-color: red;
+  margin-top: 50px;
+  margin-left: 60px;
 }

@@ -12,13 +12,6 @@ export default function Home() {
 
   const loginHandle = () => {
     if (inputPassValue === "password") return route.push("/list");
-    else {
-      return (
-        <div>
-          <h1 className={styles.incorectPass}> password in incorect </h1>
-        </div>
-      );
-    }
   };
   return (
     <>
@@ -28,7 +21,8 @@ export default function Home() {
       </Head>
       <section className={styles.mainContiner}>
         <div className={styles.container}>
-          <div className={styles.manContainer}>
+          {/* circle in top of our box */}
+          <div className={styles.circle}>
             <Image
               src="/images/Ellipse 1.svg"
               alt="man background"
@@ -36,16 +30,22 @@ export default function Home() {
               height={176}
               layout="fixed"
             />
-            <div className={styles.man}>
-              <Image
-                src="/images/Group.svg"
-                alt="man pic"
-                width={120}
-                height={120}
-              />
-            </div>
           </div>
+
+          {/* Man in our Circle */}
+          <div className={styles.man}>
+            <Image
+              src="/images/Group.svg"
+              alt="man pic"
+              width={120}
+              height={120}
+            />
+          </div>
+
+          {/* Our Input That Accept Password */}
           <div className={styles.inputContainer}>
+
+            {/* Key Image */}
             <div className={styles.keyContainer}>
               <Image
                 src="/images/carbon_password.svg"
@@ -56,6 +56,7 @@ export default function Home() {
               />
             </div>
 
+            {/* Input for Password */}
             <input
               onChange={(e) => setInputPassValue(e.target.value)}
               type="password"
@@ -63,11 +64,13 @@ export default function Home() {
             />
           </div>
 
-          <button className={styles.hintBtn}> Hint </button>
+          <p className={styles.forgetPassword}>forget password</p>
+
+          <button onClick={() => loginHandle()} className={styles.loginBtn}>
+            Login
+          </button>
         </div>
-        <button onClick={() => loginHandle()} className={styles.loginBtn}>
-          Login
-        </button>
+        
       </section>
     </>
   );

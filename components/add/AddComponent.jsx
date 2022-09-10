@@ -33,6 +33,7 @@ const Add = () => {
       <>
         <section className={styles.main}>
           <div
+            dir="rtl"
             onClick={() => setShowAddModal(false)}
             className={styles.closeModal}
           >
@@ -97,7 +98,11 @@ const Add = () => {
             />
           </div>
 
-          <button onClick={(e) => handleProfileData(e)} className={styles.btn}>
+          <button
+            dir="rtl"
+            onClick={(e) => handleProfileData(e)}
+            className={styles.btn}
+          >
             ok
           </button>
         </section>

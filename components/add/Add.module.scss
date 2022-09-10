@@ -5,15 +5,14 @@
 .main {
   background-color: $container-bg;
   position: absolute;
-  left: 700px;
-  top: 150px;
+  margin-left: 550px;
+  top: 130px;
   width: 45%;
-  height: 70%;
+  height: 71%;
+  z-index: 1000;
 }
 
 .closeModal {
-  position: absolute;
-  right: 0px;
   cursor: pointer;
 }
 

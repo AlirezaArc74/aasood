@@ -1,20 +1,18 @@
-@import '../../styles/colors.module.scss';
-
+@import "../../styles/colors.module.scss";
 
 .main {
   background-color: $container-bg;
   position: absolute;
-  left: 700px;
-  top: 180px;
-  width: 45%;
-  height: 70%;
+  left: 520px;
+  top: 130px;
+  width: 52%;
+  height: 55%;
 }
 
 .nameHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .name {
@@ -48,7 +46,6 @@
 
 .hrLine {
   background-color: $base-hrLine;
-  opacity: .6;
+  opacity: 0.6;
   margin-top: 60px;
 }
-

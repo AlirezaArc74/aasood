@@ -21,6 +21,20 @@ const UserContextProvider = ({ children }) => {
       username: "g_goole",
       url: "www.google.com",
     },
+    {
+      id: 0,
+      name: "yahoo",
+      password: "$43@fd%^bc",
+      username: "G-GGOOL",
+      url: "www.yahoo.com",
+    },
+    {
+      id: 1,
+      name: "google",
+      password: "$3%356!de",
+      username: "g_goole",
+      url: "www.google.com",
+    },
   ]);
 
   return (

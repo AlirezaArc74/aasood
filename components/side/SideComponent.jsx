@@ -79,31 +79,47 @@ const Side = (props) => {
   return (
     <>
       <section className={styles.main}>
-        <div className={styles.imgInputContainer}>
-          <Image
-            src="/../images/Vector.svg"
-            width={24}
-            height={24}
-            alt="zarebin"
-          />
-          <input
-            className={styles.searchInput}
-            type="text"
-            placeholder="Search"
-            onChange={(e) => setSearchInputValue(e.target.value)}
-          />
+        <div className={styles.container}>
+          <div className={styles.imgInputContainer}>
+            <Image
+              src="/../images/Vector.svg"
+              width={24}
+              height={24}
+              alt="zarebin"
+            />
+            <input
+              className={styles.searchInput}
+              type="text"
+              placeholder="Search"
+              onChange={(e) => setSearchInputValue(e.target.value)}
+            />
+          </div>
+
+          <hr className={styles.hrLine} />
+
+          {renderList()}
         </div>
 
-        <hr className={styles.hrLine} />
-
-        {renderList()}
-
-        <button onClick={() => handleModal()} className={styles.addButton}>
-          +
-        </button>
+        <div className={styles.btnContainer}>
+          <button onClick={() => handleModal()} className={styles.addButton}>
+            +
+          </button>
+        </div>
       </section>
 
+      <div className={styles.image}>
+        <Image
+          src="/../../images/Group 3.svg"
+          layout="fill"
+          // height={300}
+          // width={240}
+          alt="img"
+        />
+      </div>
+
       <section> {showAddModal ? <Add /> : null} </section>
+
+      
 
       <section>{showProfileModal ? <Profile /> : null}</section>
     </>

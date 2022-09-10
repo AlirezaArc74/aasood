@@ -3,38 +3,54 @@
 .main {
   position: absolute;
   background-color: $container-bg;
+  width: 33%;
   height: 100%;
-  width: 36%;
   padding-left: 60px;
-  padding-top: 70px;
+  
+}
+
+.container {
+  border-right: 1px solid $base-border-color;
+  height: 93%;
+  margin-top: 50px;
 }
 
 .searchInput {
   outline: none;
   border: unset;
   font-size: 18px;
-  padding-left: 15px;
   color: #919191;
+  width: 100%;
+  margin-left: 10px;
 }
 
 .imgInputContainer {
   display: flex;
+  justify-content: space-between;
+  margin-right: 100px;
 }
 
 .hrLine {
   margin-top: 40px;
-  background-color: $base-hrLine;
+  margin-right: 15px;
+  background-color: $base-border-color;
   opacity: 0.6;
+}
+
+.btnContainer {
+
+ z-index: 200;
+ margin-top: -100px;
+  padding-right: 50px;
 }
 
 .addButton {
   background-color: $base-side-grey;
   border: unset;
   color: $container-bg;
-  width: 87%;
+  width: 100%;
   height: 64px;
   font-size: 50px;
-  position: absolute;
   bottom: 60px;
   cursor: pointer;
 }
@@ -53,4 +69,12 @@
 .ul {
   margin-left: -15px;
   padding: 0;
+}
+
+.image {
+  position: absolute;
+  width: 240px;
+  height: 300px;
+  margin-top: 250px;
+  margin-left: 800px;
 }
